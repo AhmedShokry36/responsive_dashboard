@@ -1,12 +1,12 @@
-import 'package:dashboard/View/DashboardView.dart';
+import 'package:dashboard/View/dashboard_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const Dashboard());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
 
   @override
   Widget build(BuildContext context) {
