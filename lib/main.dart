@@ -12,7 +12,7 @@ class Dashboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.amber,
+      color: Colors.blue,
       home: Dashboardview(),
     );
   }
