@@ -8,7 +8,6 @@ class Dashboardview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: AdaptiveLayout(
         mobileLayout: (context) => SizedBox(),
         tabletLayout: (context) => SizedBox(),

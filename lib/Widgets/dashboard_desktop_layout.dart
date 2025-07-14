@@ -5,6 +5,13 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 1,
+        title: Text("data"),
+        centerTitle: true,
+        backgroundColor: Colors.teal,
+      ),
+    );
   }
 }
