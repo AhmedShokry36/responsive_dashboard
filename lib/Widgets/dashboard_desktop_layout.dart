@@ -1,3 +1,4 @@
+import 'package:dashboard/Widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
@@ -5,13 +6,6 @@ class DashboardDesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 1,
-        title: Text("data"),
-        centerTitle: true,
-        backgroundColor: Colors.teal,
-      ),
-    );
+    return Row(children: [Expanded(child: CustomDrawer())]);
   }
 }
