@@ -1,20 +1,20 @@
+import 'package:dashboard/Widgets/active_and_inactive.dart';
 import 'package:dashboard/models/drower_item_model.dart';
-import 'package:dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DrowerItem extends StatelessWidget {
-  const DrowerItem({super.key, required this.drowerItemModel});
+  const DrowerItem({
+    super.key,
+    required this.drowerItemModel,
+    required this.isActive,
+  });
 
   final DrowerItemModel drowerItemModel;
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SvgPicture.asset(drowerItemModel.image),
-      title: Text(
-        drowerItemModel.title,
-        style: AppStyles.styleMedium16(context),
-      ),
-    );
+    return isActive
+        ? ActiveDrowerItem(drowerItemModel: drowerItemModel)
+        : InActiveDrowerItem(drowerItemModel: drowerItemModel);
   }
 }
