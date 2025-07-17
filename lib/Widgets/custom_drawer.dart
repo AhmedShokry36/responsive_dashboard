@@ -13,29 +13,39 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          UserInfoListTile(
-            image: Assets.imagesAvatar3,
-            title: "Lekan",
-            subtitle: "demo@gmail.com",
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              image: Assets.imagesAvatar3,
+              title: "Lekan",
+              subtitle: "demo@gmail.com",
+            ),
           ),
-          SizedBox(height: 8),
+          SliverToBoxAdapter(child: SizedBox(height: 8)),
           DrowerItemsListView(),
-          Expanded(child: SizedBox()),
-          InActiveDrowerItem(
-            drowerItemModel: DrowerItemModel(
-              image: Assets.imagesSettings,
-              title: "Setting system ",
+
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox()),
+                InActiveDrowerItem(
+                  drowerItemModel: DrowerItemModel(
+                    image: Assets.imagesSettings,
+                    title: "Setting system ",
+                  ),
+                ),
+                InActiveDrowerItem(
+                  drowerItemModel: DrowerItemModel(
+                    image: Assets.imagesLogout,
+                    title: "Logout",
+                  ),
+                ),
+                SizedBox(height: 48),
+              ],
             ),
           ),
-          InActiveDrowerItem(
-            drowerItemModel: DrowerItemModel(
-              image: Assets.imagesLogout,
-              title: "Logout",
-            ),
-          ),
-          SizedBox(height: 48),
         ],
       ),
     );

@@ -8,6 +8,7 @@ class Dashboardview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFFAFAFA),
       body: AdaptiveLayout(
         mobileLayout: (context) => SizedBox(),
         tabletLayout: (context) => SizedBox(),
