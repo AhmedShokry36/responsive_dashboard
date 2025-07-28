@@ -17,19 +17,7 @@ class AllExpensesItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
         ),
       ),
-      child: Row(
-        children: [
-          AllExpensesItemHeader(image: itemModel.image),
-          Spacer(),
-          Transform.rotate(
-            angle: -1.57079633 * 2,
-            child: const Icon(
-              Icons.arrow_back_ios_new_outlined,
-              color: Color(0xFF064061),
-            ),
-          ),
-        ],
-      ),
+      child: Row(children: [AllExpensesItemHeader(image: itemModel.image)]),
     );
   }
 }
